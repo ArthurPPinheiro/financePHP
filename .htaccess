@@ -1,0 +1,19 @@
+RewriteEngine on
+
+RewriteRule ^login/?$ login.php
+RewriteRule ^sair/?$ sair.php
+
+RewriteRule ^dashboard/?$ index.php?page=dashboard
+
+RewriteRule ^entradas/?$ index.php?page=entradas/lista
+RewriteRule ^entradas/criar?$ index.php?page=entradas/criar
+RewriteRule ^entradas/editar/([0-9]+)?$ index.php?page=entradas/editar&id_entrada=$1
+RewriteRule ^entradas/deletar/(.+)?$ index.php?page=entradas/deletar&ids_entrada=$1
+
+RewriteRule ^gastos/?$ index.php?page=gastos/lista
+RewriteRule ^gastos/criar?$ index.php?page=gastos/criar
+RewriteRule ^gastos/editar/([0-9]+)?$ index.php?page=gastos/editar&id_gasto=$1
+RewriteRule ^gastos/deletar/(.+)?$ index.php?page=gastos/deletar&ids_gasto=$1
+
+
+RewriteRule ^configuracoes/?$ index.php?page=configuracoes
